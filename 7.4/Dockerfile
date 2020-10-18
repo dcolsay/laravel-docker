@@ -79,6 +79,9 @@ RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/
 # Install PHP_CodeSniffer
 RUN composer global require "squizlabs/php_codesniffer=*"
 
+# Install Laravel Envoy
+RUN composer global require "laravel/envoy=~1.0"
+
 # Cleanup dev dependencies
 RUN apk del -f .build-deps
 
